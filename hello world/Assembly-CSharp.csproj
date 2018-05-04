@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AnoherPlayerControl.cs" />
+     <Compile Include="Assets\Scripts\AnotherCF.cs" />
+     <Compile Include="Assets\Scripts\BackgroundPA.cs" />
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />

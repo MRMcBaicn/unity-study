@@ -43,23 +43,23 @@ public class AnoherPlayerControl : MonoBehaviour {
         {
             flip();
         }
-        /*if(bJump)
+        if(bJump)
         {
-            anim.SetTrigger("Jump");
+            /*anim.SetTrigger("Jump");
 
             int i = Random.Range(0, jumpClips.Length);
-            AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);
+            AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);*/
             herobody.AddForce(new Vector2(0f, jumpForce));
             bJump = false;
-        }*/
+        }
     }
     // Update is called once per frame
     void Update () {
-        /*grounded = Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("ground"));
+        grounded = Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("ground"));
         if(grounded && Input.GetButtonDown("Jump"))
         {
             bJump = true;
-        }*/
+        }
 	}
     void flip()
     {

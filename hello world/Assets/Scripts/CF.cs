@@ -3,31 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CF : MonoBehaviour {
-   // public Transform hero;
+ 
     private Transform player;
-    public float xMargin = 1;
-    public float yMargin = 1;
-    public float xSmooth = 8;
-    public float ySmooth = 8;
+    public float xMargin = 1f;
+    public float yMargin = 1f;
+    public float xSmooth = 8f;
+    public float ySmooth = 8f;
     public Vector2 maxXAndY;
     public Vector2 minXAndY;
 
 	// Use this for initialization
-	void Start () {
+	void Awake() {
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
+       // player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.Find("hero").transform;
     }
 	
-	// Update is called once per frame
-	void Update () {
-       // transform.position = new Vector3(hero.position.x, hero.position.y, transform.position.z);
-
-    }
-    void FixedUpdate()
-    {
-        TrackPlayer();
-    }
+	
+  
     bool xMarginCheack()
     {
         return Mathf.Abs(transform.position.x - player.position.x) > xMargin;
@@ -35,6 +28,10 @@ public class CF : MonoBehaviour {
     bool yMarginCheack()
     {
         return Mathf.Abs(transform.position.y - player.position.y) > yMargin;
+    }
+    void FixedUpdate()
+    {
+        TrackPlayer();
     }
     void TrackPlayer()
     {
