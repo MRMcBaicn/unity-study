@@ -6,7 +6,7 @@ public class AnoherPlayerControl : MonoBehaviour {
     //水平移动
     public float maxSpeed = 5f;
     public float moveForce = 365f;
-    public bool bFaceright = true;
+    [HideInInspector]public bool bFaceright = true;
     //跳跃
     public float jumpForce = 1000f;
     public Transform mGroundCheck;

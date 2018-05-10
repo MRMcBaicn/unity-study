@@ -25,7 +25,7 @@ public class AnotherCF : MonoBehaviour {
         return Mathf.Abs(transform.position.y - player.position.y) > yMargin;
     }
 	// Update is called once per frame
-	void FixedUpdate() {
+	void LateUpdate() {
         TrackPlayer();
 	}
     void TrackPlayer()

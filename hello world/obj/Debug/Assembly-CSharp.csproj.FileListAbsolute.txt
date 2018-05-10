@@ -1,0 +1,1 @@
+G:\hello world\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

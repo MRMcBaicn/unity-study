@@ -9,8 +9,8 @@ public class BackgroundPA : MonoBehaviour {
     public float parallaxReductionFactor;
     public float smoothing;
 
-    private Transform cam;
-    private Vector3 previousCamPos;
+    public Transform cam;
+    public Vector3 previousCamPos;
 	// Use this for initialization
     void Awake()
     {
@@ -22,15 +22,7 @@ public class BackgroundPA : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float parallax = (previousCamPos.x - cam.position.x) * parallaxScale;
+        //float parallax = ();
 
-        for(int i =0 ; i<backgrounds.Length; i++)
-        {
-            float backgroundTargetPosX = backgrounds[i].position.x + parallax * (i * parallaxReductionFactor + 1);
-            Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
-            backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
-        }
-
-        previousCamPos = cam.position;
     }
 }
