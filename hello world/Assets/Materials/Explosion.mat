@@ -21,23 +21,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: <noninit>
       second: 0
-    - first:
-        name: PixelSnap
-      second: 0
     m_Colors:
     - first:
         name: <noninit>
-      second: {r: 0, g: 2.4091419e-33, b: 0, a: 2.4091301e-33}
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0, g: 2.9165705e-33, b: 0, a: 2.9165587e-33}
