@@ -12,7 +12,8 @@ public class AnoherPlayerControl : MonoBehaviour {
     public Transform mGroundCheck;
     private bool grounded = false;
     private bool bJump = false;
-     // 动画
+    private Animator anim;
+    // 动画
     /*public AudioClip[] jumpClips;
     private Animator anim;*/
 
@@ -21,12 +22,14 @@ public class AnoherPlayerControl : MonoBehaviour {
 	void Start () {
         herobody = GetComponent<Rigidbody2D>();
         mGroundCheck = transform.Find("groundObject");
+        anim = GetComponent<Animator>();
 
     }
 	void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
-        if( h * herobody.velocity.x < maxSpeed )
+        anim.SetFloat("speed", Mathf.Abs(h));
+        if ( h * herobody.velocity.x < maxSpeed )
         {
             herobody.AddForce(Vector2.right * h * moveForce);
 
@@ -48,7 +51,9 @@ public class AnoherPlayerControl : MonoBehaviour {
             /*anim.SetTrigger("Jump");
 
             int i = Random.Range(0, jumpClips.Length);
+
             AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);*/
+            anim.SetTrigger("jump");
             herobody.AddForce(new Vector2(0f, jumpForce));
             bJump = false;
         }

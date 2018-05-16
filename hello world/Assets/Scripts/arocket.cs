@@ -17,9 +17,11 @@ public class arocket : MonoBehaviour {
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Enemy")
+        if(col.gameObject.tag != "Player")
         {
-            
+            // Instantiate the explosion and destroy the rocket.
+            onExplosion();
+            Destroy(gameObject);
         }
     }
 
